@@ -1,0 +1,32 @@
+<% include partials/header %>
+  <h1>
+    <%= title %>
+  </h1>
+  <section>
+    <style scoped>
+      section {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 1rem;
+      }
+
+      .card {
+        margin: 1rem;
+      }
+    </style>
+    <% for (let i = 0; i < users.length; i++) { %>
+
+        <div class="card-body">
+          <h4 class="card-title">
+            <%= users[i].username %>
+          </h4>
+          <h5 class="card-subtitle">
+            <%= users[i]._id %>
+          </h5>
+        </div>
+      </div>
+      </div>
+      <% } %>
+  </section>
+  <% include partials/footer %>
